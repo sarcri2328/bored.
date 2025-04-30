@@ -9,9 +9,9 @@
 public class App {
     public static void main(String[] args) throws Exception {
         //Print application header
-        System.out.println("-------------------------------------------------------------------------------");
-        System.out.println("Sarah Criswell - Week 3 Constructors & Access Specifiers Performance Assessment");
-        System.out.println("-------------------------------------------------------------------------------");
+        System.out.println("------------------------------");
+        System.out.println("Sarah Criswell - The Bored App");
+        System.out.println("------------------------------");
         System.out.println();
     }
 }
