@@ -2,6 +2,7 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "lib/**/*.jar",
+        "c:\\Program Files\\Eclipse Foundation\\sqlite-jdbc-3.36.0.3\\sqlite-jdbc-3.36.0.3.jar"
     ]
 }
