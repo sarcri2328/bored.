@@ -1,7 +1,7 @@
 /* 
  * Name: Sarah Criswell
- * Date: 4/29/2025
- * Assignment: SDC330 Week 3 Course Project
+ * Date: 5/11/2025
+ * Assignment: SDC330 Course Project - bored. 
  * 
  * Class Description: The IndoorActivity class is a child class of the Activity abstract class.
  * It inherits from the Activity class
@@ -13,8 +13,20 @@ public class IndoorActivity extends Activity {
     private String Location;
     private String Activity;
 
+    public IndoorActivity(Integer id, String activity, String location, String description) {
+        super.ID = id;
+        super.Activity = activity;
+        super.Location = location;
+        super.Description = description;
+    }
+    public IndoorActivity(String activity, String location, String description) {
+        super.Activity = activity;
+        super.Location = location;
+        super.Description = description;
+    }
+
     public String getDescription(){
-        return "Returns activity description"; //Change this later on
+        return super.Description;
     }
 
     public String getLocation(){
