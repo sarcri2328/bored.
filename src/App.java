@@ -1,7 +1,7 @@
 /* 
  * Name: Sarah Criswell
- * Date: 4/29/2025
- * Assignment: SDC330 Week 3 Course Project
+ * Date: 5/11/2025
+ * Assignment: SDC330 Course Project - bored. 
  * 
  * Class Description: This is the main entry point of the application
  */
@@ -60,14 +60,14 @@ public class App {
 
                                     switch (activityTypeResponse) {
                                             case "1":
-                                                printIndoorActivities(ActivityDB.getAllIndoorActivities(conn));
+                                                printIndoorActivities(ActivityList.getAllIndoorActivities(conn));
                                                 break;
                                             case "2":
-                                                printOutdoorActivities(ActivityDB.getAllOutdoorActivities(conn));
+                                                printOutdoorActivities(ActivityList.getAllOutdoorActivities(conn));
                                                 break;
                                             case "3":
-                                                printIndoorActivities(ActivityDB.getAllIndoorActivities(conn));
-                                                printOutdoorActivities(ActivityDB.getAllOutdoorActivities(conn));
+                                                printIndoorActivities(ActivityList.getAllIndoorActivities(conn));
+                                                printOutdoorActivities(ActivityList.getAllOutdoorActivities(conn));
                                                 break;
                                             case "4":
                                                 System.out.println("Returning to the main menu.");
@@ -100,7 +100,7 @@ public class App {
                     } catch (java.sql.SQLException e) {
                         System.err.println("Error closing connection: " + e.getMessage());
                     }
-                    scanner.close(); // Close the scanner outside the loop after the user quits
+                    scanner.close();
                 }
     }
 
@@ -130,7 +130,7 @@ public class App {
         }
     }
 
-    private static void printIndoorActivities(ArrayList<Activity> indoorActivities) {
+    private static void printIndoorActivities(ArrayList<IndoorActivity> indoorActivities) {
         if (indoorActivities != null && !indoorActivities.isEmpty()) {
             System.out.println("\n--- Indoor Activities ---");
             for (Activity ia : indoorActivities) {
@@ -142,7 +142,7 @@ public class App {
         }
     }
 
-    private static void printOutdoorActivities(ArrayList<Activity> outdoorActivities) {
+    private static void printOutdoorActivities(ArrayList<OutdoorActivity> outdoorActivities) {
         if (outdoorActivities != null && !outdoorActivities.isEmpty()) {
             System.out.println("\n--- Outdoor Activities ---");
             for (Activity oa : outdoorActivities) {
