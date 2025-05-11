@@ -1,7 +1,7 @@
 /* 
  * Name: Sarah Criswell
- * Date: 4/29/2025
- * Assignment: SDC330 Week 3 Course Project
+ * Date: 5/11/2025
+ * Assignment: SDC330 Course Project - bored. 
  * 
  * Class Description: The Activity class is the super class of IndoorActivity and OutdoorActivity.
  * It contains getters for each field in the database, and constructors for the Database.

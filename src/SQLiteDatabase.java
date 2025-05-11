@@ -1,7 +1,7 @@
 /*******************************************************************
 * Name: Sarah Criswell
-* Date: 5/6/2025
-* Assignment: SDC330 Week 3 Course Project
+* Date: 5/11/2025
+* Assignment: SDC330 Course Project - bored. 
 *
 * Class to handle database interactions with a SQLite database. The
 * connect method will either connect to an existing database or
