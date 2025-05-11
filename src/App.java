@@ -36,11 +36,11 @@ public class App {
 
             String mainResponse;
             do {
-                System.out.println("You must be bored, What do you want to do first?");
+                System.out.println("\nYou must be bored, What do you want to do first?");
                 System.out.println("1 = View Activities");
                 System.out.println("2 = Create a new activity");
                 System.out.println("3 = Update an activity");
-                System.out.println("3 = Delete an activity");
+                System.out.println("4 = Delete an activity");
                 System.out.println("5 = Exit\n");
                 System.out.println("Enter your choice: ");   
                 mainResponse = scanner.nextLine().toLowerCase();
@@ -83,10 +83,10 @@ public class App {
                                 ActivityDB.addActivityPrompt(conn);
                                 break;
                             case "3":
-                                System.out.println("Update functionality coming soon");
+                                ActivityDB.updateActivityPrompt(conn);
                                 break;
                             case "4":
-                                System.out.println("Delete functionality coming soon");
+                                ActivityDB.deleteActivityPrompt(conn);
                                 break;
                             case "5":
                                 System.out.println("Exiting program, go forth and don't be bored!");
@@ -135,6 +135,7 @@ public class App {
             System.out.println("\n--- Indoor Activities ---");
             for (Activity ia : indoorActivities) {
                 printActivity(ia);
+                System.out.println();
             }
         } else {
             System.out.println("No indoor activities found.");
@@ -146,6 +147,7 @@ public class App {
             System.out.println("\n--- Outdoor Activities ---");
             for (Activity oa : outdoorActivities) {
                 printActivity(oa);
+                System.out.println();
             }
         } else {
             System.out.println("No outdoor activities found.");
@@ -153,7 +155,7 @@ public class App {
     }
 
     private static void printActivity(Activity a) {
-        System.out.println(a.Activity + ": ");
+        System.out.println(a.Activity + ": " + a.ID);
         System.out.print(" (" + a.Location + ") Description: " + a.Description);
         System.out.println();
     }
