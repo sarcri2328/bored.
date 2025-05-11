@@ -17,7 +17,7 @@ public class App {
         final String dbName = "bored.db";
         //Print application header
         System.out.println("------------------------------");
-        System.out.println("Sarah Criswell - The Bored App");
+        System.out.println("Bored.");
         System.out.println("------------------------------");
         System.out.println();
         Connection conn = SQLiteDatabase.connect(dbName);
