@@ -46,8 +46,21 @@ We welcome contributions from the community! Feel free to fork this repository, 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). This means you are free to use, modify, and distribute the code for both commercial and non-commercial purposes, as long as you include the original copyright and license notice.
 
 ## Screenshots
+Main Menu
 
-\[Placeholder for Screenshots Here]
+![Main menu](boredScreenshot1.jpg)
+
+View Activity menu
+
+![View Activity menu](boredScreenshot2.jpg)
+
+View indoor activities
+
+![View indoor activities](boredScreenshot3.jpg)
+
+View outdoor activities
+
+![View outdoor activities](boredScreenshot4.jpg)
 
 ## Project Status
 
