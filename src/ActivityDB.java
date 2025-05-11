@@ -15,6 +15,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ActivityDB {
     public static boolean createTable(Connection conn) {
@@ -25,8 +26,6 @@ public class ActivityDB {
             + " ,Activity varchar(50)\n"
             + " ,Location varchar(50)\n"
             + " ,Description varchar(100))";
-
-        System.out.println(sql);
         
         try {
             Statement stmt = conn.createStatement();
@@ -49,6 +48,33 @@ public class ActivityDB {
             pst.executeUpdate();
         } catch(SQLException e) {
             System.out.println(e.getMessage());
+        }
+    }
+
+    public static void addActivityPrompt(Connection conn){
+        Scanner scanner = new Scanner(System.in);
+        Activity newActivity = new Activity();
+
+        System.out.print("Enter the activity name: ");
+        newActivity.Activity = scanner.nextLine();
+
+        System.out.print("Enter the location of the activity (Indoors/Outdoors): ");
+        newActivity.Location = scanner.nextLine();
+
+        System.out.print("Enter the description of the activity: ");
+        newActivity.Description = scanner.nextLine();
+        
+        String sql =
+            "INSERT INTO Activities(Activity, Location, Description) VALUES(?,?,?)";
+        try {
+            PreparedStatement pst = conn.prepareStatement(sql);
+            pst.setString(1, newActivity.Activity);
+            pst.setString(2, newActivity.Location);
+            pst.setString(3, newActivity.Description);
+            pst.executeUpdate();
+            System.out.println("Activity added successfully!");
+        } catch(SQLException e) {
+            System.out.println("Error adding activity: " + e.getMessage());
         }
     }
 

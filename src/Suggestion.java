@@ -7,8 +7,10 @@
  * Activity suggestions will be generated from.
  */
 
-public interface Suggestion {
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.Random;
 
-    //More to be added in this section
+public interface Suggestion {
     
 } 
